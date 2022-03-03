@@ -1,0 +1,65 @@
+.footer {
+  &__inner {
+    border-top: 1px solid $BLUE;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5rem 0 3rem;
+  }
+}
+
+.footer-left {
+  &__logo {
+    @include font(46, 50, 75, 700);
+    margin-bottom: 1rem;
+  }
+
+  &__item {
+    a {
+      display: inline-block;
+      position: relative;
+      @include font(11, 25, 0, 400);
+
+      &::after {
+        background: url(../img/module/ico_link.svg) center / cover no-repeat;
+        content: "";
+        display: block;
+        position: absolute;
+        right: -14px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 9px;
+        width: 9px;
+      }
+    }
+  }
+}
+
+.footer-right {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__box {
+    &:not(:last-child) {
+      margin-right: 3.5rem;
+    }
+  }
+
+  &__link {
+    @include font(11, 19, 0, 400);
+  }
+
+  &__tit {
+    @include font(16, 21, 75, 700);
+    margin-bottom: 0.7rem;
+  }
+}
+
+.footer-foot {
+  margin-top: 7.8rem;
+  width: 100%;
+
+  &__txt {
+    @include font(11, 19, 0, 400);
+  }
+}

@@ -1,0 +1,72 @@
+.header {
+  background: transparent;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: 0.3s ease background;
+  z-index: 1000;
+
+  &.is-active {
+    background: $WHITE;
+    box-shadow: 0 3px 6px 0 rgba(51, 51, 51, 0.06);
+  }
+
+  &__inner {
+    align-items: center;
+    display: flex;
+  }
+
+  &__tit {
+    margin-left: 3rem;
+    margin-right: 2rem;
+    max-width: 252px;
+  }
+
+  &__link {
+    @include font(16, 21, 150, 700);
+    margin-top: 0.7rem;
+  }
+
+  &__list {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__item {
+    a {
+      span {
+        display: block;
+        text-align: center;
+        &:first-child {
+          @include font(17, 22, 75, 700);
+        }
+
+        &:last-child {
+          @include font(11, 19, 0, 400);
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
+  }
+
+  &__btn {
+    height: 103px;
+    margin-left: 2rem;
+
+    a {
+      background-color: $BLUE;
+      clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+      height: 100%;
+      padding-left: 1rem;
+      text-align: center;
+      width: 130px;
+
+      @include font(20, 0, 75, 700);
+      line-height: 108px;
+    }
+  }
+}

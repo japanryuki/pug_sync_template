@@ -1,0 +1,31 @@
+@mixin pc {
+  @media screen and (min-width: ($BREAKPOINT-LV1) * 1px) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: ($BREAKPOINT-LV1) * 1px - 1) {
+    @content;
+  }
+}
+
+// 要素のサイズ可変 1081px - 1059px, 768px以下
+@function vw($arg, $brakePoint: $DESIGN-W-PC) {
+  $value: 0;
+  $value: $arg / $brakePoint * 100;
+  @return $value * 1vw;
+}
+
+// font
+@mixin font($size: 10, $height: 10, $spcing: 0, $weight: 500) {
+  font-size: ($size * 1px);
+  line-height: ($height / $size);
+  letter-spacing: ($spcing / 1000 * 1em);
+  font-weight: $weight;
+}
+@mixin font-vw($size: 10, $height: 10, $spcing: 0, $weight: 500, $viewport: 375) {
+  font-size: calc((#{$size} / #{$viewport}) * 100vw);
+  line-height: ($height / $size);
+  letter-spacing: ($spcing / 1000 * 1em);
+  font-weight: $weight;
+}

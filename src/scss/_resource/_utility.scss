@@ -1,0 +1,32 @@
+// display
+.u-is-pc {
+  @include sp {
+    display: none !important;
+  }
+}
+.u-is-sp {
+  @include pc {
+    display: none !important;
+  }
+}
+
+.u-inner {
+  width: 1540px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 7rem;
+  position: relative;
+  z-index: 2;
+}
+
+.u-align-right {
+  text-align: right;
+}
+
+.u-align-center {
+  text-align: center;
+}
+
+.u-tit {
+  @include font(75, 75, 75, 700);
+}
