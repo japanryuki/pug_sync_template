@@ -1,5 +1,5 @@
 {
-  "name": "superdry",
+  "name": "",
   "version": "1.0.0",
   "engines": {
     "node": "14.11.0",
@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://i-studio.commits.jp/asahi/superdry-v2.git"
+    "url": ""
   },
   "license": "ISC",
   "devDependencies": {
